@@ -1,11 +1,12 @@
 const express = require("express");
-const { helloWorld } = require("./controller/helloWorld/helloWorld");
 const { cepApi } = require("./controller/viaApi");
+const {cacheTest} = require('./controller/testCache')
 const router = express.Router();
 
 //will router the controllers.
-router.get("/helloworld",helloWorld)
 
-//test with axios
 router.post("/testapi",cepApi)
+
+//cache test
+router.post('/testcache',cacheTest)
 module.exports = router
