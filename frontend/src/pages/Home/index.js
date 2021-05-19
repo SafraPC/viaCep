@@ -37,7 +37,7 @@ const Home = () => {
         toast.error("O CEP está Inválido! Favor Verificar.")
       }
     } catch (error) {
-      toast.error("Houve um Erro Inesperado..  : "+error.message,TOASTIFY_OPTIONS)
+      toast.error("Houve um Erro Inesperado..  : "+error.response.data.message,TOASTIFY_OPTIONS)
 
     }
   };

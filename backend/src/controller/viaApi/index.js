@@ -16,16 +16,24 @@ const cepApi = async (req, res) => {
           res.json({ message: cached });
         } else {
           //Verify if it exists in database
-
+          const zipFound = await CepAPI.findOne({cep});
+          if(zipFound){
+            cache.set(cep, zipFound, 10);
+            res.json(zipFound);
+           
+          }else{
+          //If dont exist´s in redis and mongoDB
           const { data } = await axios(`https://viacep.com.br/ws/${cep}/json/`);
-          if (!data.error) {
+          
+          if (!data.erro) {
             await CepAPI.create(data);
+            cache.set(cep, data, 10);
             res.json(data);
-            cache.set(cep, data, 120 * 15);
           } else {
-            res.status(400).json({ message: "API ERROR!!" });
+            res.status(400).json({ message: "Informe um CEP Correto!" });
           }
         }
+      }
       } else {
         res.status(400).json({ message: "CEP Inválido!" });
       }
