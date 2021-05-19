@@ -49,6 +49,10 @@ export const Container = styled.form`
       color: white;
       margin-top: 2rem;
       padding: 0.5rem;
+      transition: background-color 0.3s ease;
+      :hover{
+        background-color:var(--color-hover-blue);
+      }
     }
   }
   @media (max-width: 1000px) {
