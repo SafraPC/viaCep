@@ -6,7 +6,7 @@ import notFound from '../../assets/not_found.svg'
 import { Container } from './styles';
 import { useHistory } from 'react-router';
 
-function NotFound() {
+const NotFound = () => {
 
   const {push} = useHistory();
 
