@@ -12,12 +12,13 @@ a {
 text-decoration: none;
 }
 input,textarea {
-border: 1.5px solid var(--color-blackPurple) !important;
+border: 1px solid var(--color-hover-blue) !important;
 transition:border 0.3s ease;
-    transition:box-shadow 0.2s ease;
+border-radius:0.2rem;
+    transition:box-shadow 0.1s ease;
     :focus{
-      border: 1px solid #1e1e1e !important;
-    box-shadow: 1px 1px 3px 1px #2e2e2e;
+    border: 1px solid var(--color-hover-blue) !important;
+    box-shadow: 0.2px 0.2px 2.5px var(--color-soft-blue);
 }
 }
 button {
