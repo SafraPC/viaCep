@@ -5,6 +5,7 @@ export const Page = styled.div`
   min-height: 100vh;
   background-color: #edf4f5;
 `;
+
 export const view = css`
   width: 100%;
   max-width: 1440px;

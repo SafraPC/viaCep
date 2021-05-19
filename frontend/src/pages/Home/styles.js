@@ -26,16 +26,18 @@ export const Container = styled.form`
       color: var(--color-soft-blue);
       text-align:center;
       padding:1rem;
-      margin-bottom:2rem;
+      margin-bottom:1rem;
     }
-    > label {
+    >h5{
       color: var(--color-blackPurple);
       margin-right: auto;
       width: 75% !important;
       margin: 0 auto;
       padding-bottom:1rem;
     }
+    
     > input {
+      margin-top:1rem;
       border-radius: 0.3rem;
       width: 75%;
       padding: 0.3rem;
