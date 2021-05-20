@@ -4,7 +4,7 @@ const router = express.Router();
 
 //will router the controllers.
 
-router.post("/testapi",cepApi)
+router.post("/mycep",cepApi)
 
 //cache test
 module.exports = router

@@ -23,7 +23,7 @@ const Home = () => {
       const rgx = /^[0-9]{5}-[0-9]{3}$/;
       if(rgx.test(zip)){
 
-      const infoData = await api.post("/testapi",{
+      const infoData = await api.post("/mycep",{
           cep:zip
         });
         

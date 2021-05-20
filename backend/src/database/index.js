@@ -1,8 +1,9 @@
+
 const mongoose = require("mongoose");
 
 const connect = async () => {
   await mongoose.connect(
-    "mongodb+srv://safrapc:safrapc@cluster0.ldzij.mongodb.net/viaCEP?retryWrites=true&w=majority",
+    process.env.MONGO_URL,
     {
       useNewUrlParser: true,
       useCreateIndex: true,
